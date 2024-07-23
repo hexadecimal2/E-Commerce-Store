@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 //import Sidebar from '../components/sidebar/Sidebar';
 //import Bag from '../components/Sidebag';
 import { useLocation, Link } from 'react-router-dom';
@@ -6,10 +6,25 @@ import Rating from '../components/Rating'
 
 
 
+
 const ItemDisplay = () => {
     
     const data = useLocation().state.product;
-    console.log(data);
+
+    const [items, setItems] = useState([]);
+
+    const addToBag = (item) =>{
+       const testItem = [...items]
+       if (testItem.includes(item)){
+        console.log('has item')
+       }
+       else{
+        setItems( [...items, item]);
+       }
+    }
+
+
+  
 
     return (
         <>
@@ -43,7 +58,7 @@ const ItemDisplay = () => {
                             {data.price} <br />
                             {data.description} 
                             
-                            <button> Add to Bag </button>
+                            <button onClick={() => addToBag(data)}> Add to Bag </button>
 
                         </div>
 

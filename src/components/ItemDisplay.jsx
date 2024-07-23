@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import Sidebar from '../components/sidebar/Sidebar';
 //import Bag from '../components/Sidebag';
-import { useLocation, Link, useNavigate } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import Rating from '../components/Rating'
 
 
@@ -12,7 +12,6 @@ const ItemDisplay = () => {
 
     const [items, setItems] = useState([]);
 
-
     const addToBag = (item) =>{
        const testItem = [...items]
        if (testItem.includes(item)){
@@ -22,9 +21,6 @@ const ItemDisplay = () => {
         setItems( [...items, item]);
        }
     }
-
-
-  
 
     return (
         <>

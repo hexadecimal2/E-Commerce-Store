@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 //import Sidebar from '../components/sidebar/Sidebar';
 //import Bag from '../components/Sidebag';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 import Rating from '../components/Rating'
-
 
 
 
@@ -12,6 +11,7 @@ const ItemDisplay = () => {
     const data = useLocation().state.product;
 
     const [items, setItems] = useState([]);
+
 
     const addToBag = (item) =>{
        const testItem = [...items]

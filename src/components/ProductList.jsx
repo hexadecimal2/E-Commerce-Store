@@ -13,9 +13,12 @@ import iphone11Blue from '../assets/iphone-12-pro-blue.png';
 import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
 import '../App.css';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/actions/actions';
 
 const ProductList = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const [searchQuery, setSearchQuery] = useState('');
 
     const products = [
@@ -145,6 +148,10 @@ const ProductList = () => {
        navigate('/item-view', {state: {product} });
     };
 
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+    }
+
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
@@ -175,7 +182,7 @@ const ProductList = () => {
                                 <div className="row action">
                                     <div className="col-sm-6 col-md-6 col-lg-6 card-price">$ {product.price}</div>
                                     <div className="col-sm-6 col-md-6 col-lg-6">
-                                    <button className='btn'>
+                                    <button className='btn' onClick={() => handleAddToCart(product)}>
                                         <i className='bi bi-bag-plus-fill'></i>
                                     </button>
                                     </div>

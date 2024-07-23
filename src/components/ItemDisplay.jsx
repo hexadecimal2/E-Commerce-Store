@@ -7,8 +7,8 @@ import Rating from '../components/Rating'
 
 
 const ItemDisplay = () => {
-    
-    const data = useLocation().state.product;
+    const location = useLocation();
+    const data = location.state?.product;
 
     const [items, setItems] = useState([]);
 

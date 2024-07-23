@@ -7,13 +7,13 @@ import './App.css';
 function App() {
   return (
     <>
-    <Provider>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Dashboard />} />
-        <Route path='/item-view' element={<ItemView />} />
-      </Routes>
-    </BrowserRouter>
+      <Provider>
+          <BrowserRouter>
+          <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/item-view' element={<ItemView />} />
+          </Routes>
+        </BrowserRouter>
     </Provider>
     </>
   );

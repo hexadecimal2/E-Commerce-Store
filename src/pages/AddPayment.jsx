@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 // import '../styles/AddPayment.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 import { addCard } from '../redux/actions/actions';
+
 
 const AddPayment = () => {
     const [formData, setFormData] = useState({
@@ -54,6 +56,12 @@ const AddPayment = () => {
         dispatch(addCard(newCard));
     };
 
+    const navigate = useNavigate();
+  
+    const handleCardClick = (card) => {
+        navigate('/checkout', { state: { selectedCard: card } });
+    };
+
     return (
         <>
             <div className="container-pay">
@@ -64,7 +72,7 @@ const AddPayment = () => {
                     <div className="card-list">
                         <ul>
                             {cards.map((card, index) => (
-                                <li key={index} className='card details'>
+                                <li key={index} className='card details' onClick={() => handleCardClick(card)}>
                                     <FontAwesomeIcon icon={faCreditCard} /> {card.cardType} ending in {card.last4}
                                 </li>
                             ))}

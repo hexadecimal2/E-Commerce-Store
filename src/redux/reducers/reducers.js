@@ -1,47 +1,54 @@
-import { combineReducers } from 'redux';
-import { ADD_TO_CART, ADD_PAYMENT_DETAILS, ADD_ADDRESS_DETAILS } from '../actions/actions';
+import { ActionTypes } from "../actions/actions";
 
 // Initial State
-const initialCartState = [];
-const initialPaymentState = {};
-const initialAddressState = {};
+const initialCartState = {
+  products: []
+};
+
+
+const initialPaymentState = {
+  cards: []
+};
+
+const initialAddressState = {
+  address: []
+};
 
 // Cart Reducer
-const cartReducer = (state = initialCartState, action) => {
+export const cartReducer = (state = initialCartState, action) => {
   switch (action.type) {
-    case ADD_TO_CART:
-      return [...state, action.payload];
+    case ActionTypes.ADD_TO_CART:
+      return {
+        products: [...state.products, action.payload]
+      }
     default:
       return state;
   }
 };
 
 // Payment Reducer
-const paymentReducer = (state = initialPaymentState, action) => {
+export const paymentReducer = (state = initialPaymentState, action) => {
   switch (action.type) {
-    case ADD_PAYMENT_DETAILS:
-      return { ...state, ...action.payload };
+    case ActionTypes.ADD_PAYMENT_DETAILS:
+      return {
+        ...state,
+        cards: [...state.cards, action.payload]
+      };
     default:
       return state;
   }
 };
 
 // Address Reducer
-const addressReducer = (state = initialAddressState, action) => {
+export const addressReducer = (state = initialAddressState, action) => {
   switch (action.type) {
-    case ADD_ADDRESS_DETAILS:
-      return { ...state, ...action.payload };
+    case ActionTypes.ADD_ADDRESS_DETAILS:
+      return {
+        ...state,
+        address: [...state.address, action.payload]
+      };
     default:
       return state;
   }
 };
 
-// Root Reducer is a combination of all the reducers
-// We could do this in an index.js folder in reducers but this is quicker
-const rootReducer = combineReducers({
-    cart: cartReducer,
-    payment: paymentReducer,
-    address: addressReducer,
-  });
-  
-  export default rootReducer;

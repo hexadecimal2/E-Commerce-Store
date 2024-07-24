@@ -1,37 +1,48 @@
-import React from 'react'; 
-import { useSelector , useDispatch} from 'react-redux';
-import Rating from './Rating';
-import { incrementQuantity, decrementQuantity } from '../redux/actions/actions';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increaseQuantity, decreaseQuantity } from '../redux/actions/actions';
+import Rating from '../components/Rating'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CheckBagItems = () => {
     const cartItems = useSelector(state => state.cart.products);
-
     const dispatch = useDispatch();
 
-  const handleIncrement = (productId) => {
-    dispatch(incrementQuantity(productId));
-  };
+    const handleIncrease = (productId) => {
+        dispatch(increaseQuantity(productId));
+    };
 
-  const handleDecrement = (productId) => {
-    dispatch(decrementQuantity(productId));
-  };
-    return(
-        <div>
-        {cartItems.map(product => (
-          <div key={product.id}>
-          <img src={product.image} alt={product.name} />
-            {product.name}
-            {product.smallDescription}
-            {product.description}
-            <Rating stars={product.rating}/>
-            <span>${product.price} x {product.quantity}</span>
-            <button onClick={handleDecrement(product.id)}>-</button>
-        {product.quantity}
-        <button onClick={handleIncrement(product.id)}>+</button>
-          </div>
-        ))}
-      </div>
-    )
-}
+    const handleDecrease = (productId) => {
+        dispatch(decreaseQuantity(productId));
+    };
 
-export default CheckBagItems; 
+    return (
+        <div className="container">
+            {cartItems.length === 0 ? (
+                <p>Your cart is empty</p>
+            ) : (
+                cartItems.map(products => (
+                    <div key={products.id} className="row mb-4">
+                        <div className="col-md-3">
+                            <img src={products.image} alt={products.name} className="img-fluid" />
+                        </div>
+                        <div className="col-md-6">
+                            <h5>{products.name}</h5>
+                            <p>{products.smallDescription}</p>
+                            <p>{products.description}</p>
+                            <Rating stars={products.rating}/> 
+                            <p>${products.price}</p>
+                        </div>
+                        <div className="col-md-3">
+                            <button className="btn btn-primary" onClick={() => handleDecrease(products.id)}>-</button>
+                            <span className="mx-2">{products.quantity}</span>
+                            <button className="btn btn-primary" onClick={() => handleIncrease(products.id)}>+</button>
+                        </div>
+                    </div>
+                ))
+            )}
+        </div>
+    );
+};
+
+export default CheckBagItems;

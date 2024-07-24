@@ -1,8 +1,8 @@
 // Creating action types
 export const ActionTypes = {
     ADD_TO_CART: 'ADD_TO_CART',
-    INCREMENT_QUANTITY: 'INCREMENT_QUANTITY',
-    DECREMENT_QUANTITY: 'DECREMENT_QUANTITY',
+    INCREASE_QUANTITY: 'INCREASE_QUANTITY',
+    DECREASE_QUANTITY: 'DECREASE_QUANTITY',
     ADD_CARD: 'ADD_CARD',
     ADD_ADDRESS: 'ADD_ADDRESS',
 };
@@ -11,21 +11,21 @@ export const ActionTypes = {
 //Creating the three actions
 
 //The first action to add to cart
-export const addToCart = (product, quantity) => {
+export const addToCart = (product) => {
     return {
         type: ActionTypes.ADD_TO_CART,
-        payload: {product, quantity}
+        payload: product,
     }
 };
 
 //Incrementing and decrementing quantity
-export const incrementQuantity = (productId) => ({
-    type: ActionTypes.INCREMENT_QUANTITY,
+export const increaseQuantity = (productId) => ({
+    type: ActionTypes.INCREASE_QUANTITY,
     payload: productId
   });
   
-  export const decrementQuantity = (productId) => ({
-    type: ActionTypes.DECREMENT_QUANTITY,
+  export const decreaseQuantity = (productId) => ({
+    type: ActionTypes.DECREASE_QUANTITY,
     payload: productId
   });
   

@@ -1,5 +1,6 @@
 import ItemDisplay from "../components/ItemDisplay";
 import Sidebag from "../components/Sidebag"
+import Sidebar from "../components/Sidebar"
 import {Col, Row, Container} from 'react-bootstrap';
 
 
@@ -12,7 +13,7 @@ const ItemView = () => {
         <Row>
 
             <Col md={2}>
-            
+            <Sidebar/>
             </Col>
 
             <Col md={7}>

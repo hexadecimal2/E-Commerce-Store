@@ -9,9 +9,9 @@ const Sidebag = () => {
   return (
     <div className='sidebag'>
       <h2>Cart</h2>
-      <div className='cart-items'>
+      <div className='row cart-items'>
         {products.map((product, index) => (
-          <div key={index} className='cart-item'>
+          <div key={index} className='cart-item col-4'>
             <img src={product.image} alt={product.name} className="cart-item-image" height='100' width='100' />
           </div>
         ))}

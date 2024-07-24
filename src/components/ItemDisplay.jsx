@@ -14,8 +14,7 @@ const ItemDisplay = () => {
     const dispatch = useDispatch();
     const data = location.state?.product;
 
-    
-    const [items, setItems] = useState([]);
+
 
     const addToBag = (item) =>{
         dispatch(addToCart(item));

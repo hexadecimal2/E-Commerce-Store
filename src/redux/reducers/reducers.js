@@ -51,7 +51,7 @@ export const cartReducer = (state = initialCartState, action) => {
         ...state,
         products: state.products.map(product =>
           product.id === action.payload
-            ? { ...product, quantity: Math.max(Number(product.quantity) - 1, 0) }
+            ? { ...product, quantity: (Number(product.quantity) - 1) }
             : product
         ),
       };

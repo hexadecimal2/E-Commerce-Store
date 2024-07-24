@@ -3,31 +3,31 @@ import { useSelector , useDispatch} from 'react-redux';
 import Rating from './Rating';
 import { incrementQuantity, decrementQuantity } from '../redux/actions/actions';
 
-const CheckBagItems = ({productId}) => {
+const CheckBagItems = () => {
     const cartItems = useSelector(state => state.cart.products);
 
     const dispatch = useDispatch();
 
-  const handleIncrement = () => {
+  const handleIncrement = (productId) => {
     dispatch(incrementQuantity(productId));
   };
 
-  const handleDecrement = () => {
+  const handleDecrement = (productId) => {
     dispatch(decrementQuantity(productId));
   };
     return(
         <div>
-        {cartItems.map(products => (
-          <div key={products.id}>
-          <img src={products.image} alt={products.name} />
-            {products.name}
-            {products.smallDescription}
-            {products.description}
-            <Rating stars={products.rating}/>
-            <span>${products.price} x {products.quantity}</span>
-            <button onClick={handleDecrement}>-</button>
-        {products.quantity}
-        <button onClick={handleIncrement}>+</button>
+        {cartItems.map(product => (
+          <div key={product.id}>
+          <img src={product.image} alt={product.name} />
+            {product.name}
+            {product.smallDescription}
+            {product.description}
+            <Rating stars={product.rating}/>
+            <span>${product.price} x {product.quantity}</span>
+            <button onClick={handleDecrement(product.id)}>-</button>
+        {product.quantity}
+        <button onClick={handleIncrement(product.id)}>+</button>
           </div>
         ))}
       </div>

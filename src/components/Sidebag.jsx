@@ -18,7 +18,7 @@ const Sidebag = () => {
         ))}
 
       </div>
-      <Link to={'/check-bag'}><button>Check Bag</button></Link>
+      <button><Link to={'/check-bag'}>Check Bag</Link></button>
     </div>
   );
 };

@@ -13,6 +13,7 @@ import iphone11Blue from '../assets/iphone-12-pro-blue.png';
 import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
 import '../App.css';
+import '../styles/ProductList.css';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/actions/actions';
 
@@ -172,12 +173,12 @@ const ProductList = () => {
     return (
         <div className='product-list'>
             <div className='container'>
-                <div className="search-bar mb-4 mx-auto justify-content-center" style={{ maxWidth: '50%' }}>
+                <div className="search-bar mt-4 mb-4 mx-auto justify-content-center" style={{ maxWidth: '50%' }}>
                     <label className="search-label" htmlFor="search">Search Item</label>
                     <input
                         type="text"
                         id="search"
-                        className="form-control"
+                        className="form-control search-box"
                         placeholder="Apple Watch, Samsung 21, Macbook Pro"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}

@@ -72,9 +72,9 @@ const AddPayment = () => {
                     <div className="card-list">
                         <div className='row'>
                             {cards.map((card, index) => (
-                                <li key={index} className='card details' onClick={() => handleCardClick(card)}>
-                                    <FontAwesomeIcon icon={faCreditCard} /> {card.cardType} ending in {card.last4}
-                                </li>
+                                <div key={index} className='col-12' onClick={() => handleCardClick(card)}>
+                                    <FontAwesomeIcon icon={faCreditCard} className='me-2' /> {card.cardType} ending in {card.last4}
+                                </div>
                             ))}
                         </div>
                     </div>

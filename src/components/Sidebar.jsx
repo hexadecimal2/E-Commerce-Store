@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import '../styles/Sidebar.css';
+import '../styles/Sidebar.css';
 import Logo from "../assets/logo.png";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

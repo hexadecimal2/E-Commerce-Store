@@ -32,7 +32,7 @@ const AddAddress = () => {
 
   return (
     <>
-    <div className="container">
+    <div className="container-address">
       <form className="add-address-form" onSubmit={handleSubmit}>
         <div className="form-group shipping">
           <label htmlFor="name" className="label-name">

@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from 'react-router-dom';
 
 const Sidebag = () => {
   const products = useSelector((state) => state.cart.products);
@@ -15,7 +16,9 @@ const Sidebag = () => {
             <img src={product.image} alt={product.name} className="cart-item-image" height='100' width='100' />
           </div>
         ))}
+
       </div>
+      <button><Link to={'/check-bag'}>Check Bag</Link></button>
     </div>
   );
 };

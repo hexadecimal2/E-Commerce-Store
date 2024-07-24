@@ -6,6 +6,7 @@ import store from './redux/store';
 import './App.css';
 import AddPayment from './pages/AddPayment';
 import AddAddress from './pages/AddAddress';
+import CheckBag from './pages/CheckBag';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
           <Route path='/' element={<Dashboard />} />
           <Route path='/item-view' element={<ItemView />} />
+          <Route path='/check-bag' element={<CheckBag/>}/>
           <Route path='/add-payment' element={<AddPayment />} />
           <Route path='/add-address' element={<AddAddress />} />
           </Routes>

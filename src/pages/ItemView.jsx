@@ -11,15 +11,15 @@ const ItemView = () => {
 
         <Row>
 
-            <Col md={3} style={{border: '1px solid green'}}>
+            <Col md={2}>
             
             </Col>
 
-            <Col md={6} style={{border: '1px solid green'}}>
+            <Col md={7}>
             <ItemDisplay/>
             </Col>
 
-            <Col md={3} style={{border: '1px solid green'}}>
+            <Col md={3}>
             <Sidebag/>
             </Col>
 

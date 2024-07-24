@@ -42,7 +42,7 @@ export const cardReducer = (state = initialCardState, action) => {
 // Address Reducer
 export const addressReducer = (state = initialAddressState, action) => {
   switch (action.type) {
-    case ActionTypes.ADD_ADDRESS_DETAILS:
+    case ActionTypes.ADD_ADDRESS:
       return {
         ...state,
         address: [...state.address, action.payload]

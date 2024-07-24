@@ -2,7 +2,7 @@
 export const ActionTypes = {
     ADD_TO_CART: 'ADD_TO_CART',
     ADD_CARD: 'ADD_CARD',
-    ADD_ADDRESS_DETAILS: 'ADD_ADDRESS_DETAILS',
+    ADD_ADDRESS: 'ADD_ADDRESS',
 };
 
 

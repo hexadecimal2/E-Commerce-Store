@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import './App.css';
 import AddPayment from './pages/AddPayment';
+import AddAddress from './pages/AddAddress';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Dashboard />} />
           <Route path='/item-view' element={<ItemView />} />
           <Route path='/add-payment' element={<AddPayment />} />
+          <Route path='/add-address' element={<AddAddress />} />
           </Routes>
         </BrowserRouter>
       </Provider> 

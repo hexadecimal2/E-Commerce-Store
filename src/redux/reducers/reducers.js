@@ -6,7 +6,7 @@ const initialCartState = {
 };
 
 
-const initialPaymentState = {
+const initialCardState = {
   cards: []
 };
 
@@ -27,9 +27,9 @@ export const cartReducer = (state = initialCartState, action) => {
 };
 
 // Payment Reducer
-export const paymentReducer = (state = initialPaymentState, action) => {
+export const cardReducer = (state = initialCardState, action) => {
   switch (action.type) {
-    case ActionTypes.ADD_PAYMENT_DETAILS:
+    case ActionTypes.ADD_CARD:
       return {
         ...state,
         cards: [...state.cards, action.payload]

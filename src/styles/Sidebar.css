@@ -1,12 +1,13 @@
 
 .sidebar {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
     height: 98vh;
     width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
     background-color: #ffffff;
+    overflow-x: hidden;
     text-align: center;
     padding: 8px;
     margin: 20px;
@@ -29,6 +30,12 @@ ul {
     padding: 0;
 }
 
+.active li {
+    background-color: #1A1F16;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
 .link {
     text-decoration: none;
     color: #1A1F16;
@@ -43,14 +50,6 @@ ul {
 .nav-links .link li .btn span {
     margin-left: 10px;
 }
-
-/* .nav-links .link li.active .btn {
-    background-color: #1A1F16;
-    color: #ffffff;
-} */
-/* .sidebar.expanded .nav.links .link li .btn span {
-    display: inline-block;
-} */
 
 .bottom-sidebar .btn {
     position: absolute;

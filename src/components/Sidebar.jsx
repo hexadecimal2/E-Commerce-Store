@@ -21,7 +21,7 @@ const Sidebar = () => {
             <img src={Logo} alt="commerce website logo" />
           </div>
           </Link>
-          <button className="btn menu-btn" onClick={toggleSidebar}>
+          <button className="btn toggle-button" onClick={toggleSidebar}>
             <FontAwesomeIcon icon={isExpanded ? faTimes : faBars} />
           </button>
           

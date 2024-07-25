@@ -1,6 +1,10 @@
 .row{
     margin-top: 30px;
 }
+h2{
+    font-weight: 600;
+    font-size: 35px;
+}
 
 .btn-increase{
     background-color: transparent;

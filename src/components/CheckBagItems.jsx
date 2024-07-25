@@ -21,7 +21,7 @@ const CheckBagItems = () => {
 
     return (
         <div className="container">
-        <h1>Check you Bag Items</h1>
+        <h2>Check your Bag Items</h2>
             {cartItems.length === 0 ? (
                 <p>Your cart is empty</p>
             ) : (

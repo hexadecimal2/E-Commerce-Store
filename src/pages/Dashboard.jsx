@@ -15,7 +15,7 @@ const Dashboard = () => {
                 </div>
                 <div className="col-3 me-0">
                 <Sidebag caption="  View Bag" link = "/check-bag"/>
-                <Sidebag caption = "View Bag" link='/check-bag'/>
+                
                 </div>
             </div>
         </div>

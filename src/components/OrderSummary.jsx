@@ -43,7 +43,7 @@ const OrderSummary = () => {
         <button className='back-to-checkout'>
             <span className='back-to-bag'>
             <i class="bi bi-chevron-left"></i>
-            Back
+            {' '} Back
             </span>
         </button>
         </>

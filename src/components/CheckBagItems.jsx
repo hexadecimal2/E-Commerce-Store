@@ -31,7 +31,7 @@ const CheckBagItems = () => {
                             <p>{products.smallDescription}</p>
                             <p>{products.description}</p>
                             <Rating stars={products.rating}/> 
-                            <p>${products.price}</p>
+                            <p>${products.price} <span>X{products.quantity}</span></p>
                         </div>
                         <div className="col-md-3">
                             <button className="btn btn-primary" onClick={() => handleDecrease(products.id)}>-</button>

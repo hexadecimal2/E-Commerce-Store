@@ -1,7 +1,7 @@
 .payment-container{
     background: #ffff;
-    border-radius: 20px ;
-    margin-bottom: 50px;
+    border-radius: 10px ;
+    margin-bottom: 20px;
 }
 .btn-payment{
     border: 1px solid #1A1F16;
@@ -13,4 +13,8 @@
 }
 .payment-content{
     margin: 20px;
+}
+h2{
+    font-weight: lighter;
+    letter-spacing: 4px;
 }

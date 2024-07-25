@@ -8,7 +8,7 @@ const Payment = () => {
 
   return (
     <div className='payment-container'>
-    <h1 className='payment-content'>PAYMENT METHOD</h1>
+    <h2 className='payment-content'>PAYMENT METHOD</h2>
     <div className='row'>
     <div>
       {selectedCard ? (

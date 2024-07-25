@@ -9,11 +9,13 @@ const Address = () => {
 
   if (!address) {
     return (
-        <>
-    <h1>SHIPPING ADDRESS</h1> 
-    <p>No address added yet.</p>
-    <Link to={'/add-address'}><button>Add Address</button></Link>
-    </>
+        <div className='no-address-container'>
+            <div className='no-address-content'>
+                <h2>SHIPPING ADDRESS</h2> 
+                <p>No address added yet.</p>
+            </div>
+            <Link to={'/add-address'}><button className='btn-no-address'>Add Address</button></Link>
+        </div>
     )
   }
 

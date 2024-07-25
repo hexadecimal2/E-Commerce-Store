@@ -1,0 +1,106 @@
+.container-pay {
+    width: 60%;
+    margin: auto;
+}
+
+@media (max-width: 991px) {
+    .container-pay {
+        width: 90%;
+    }
+}
+
+.container.select-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.select-card-heading {
+    padding: 16px;
+    color: #1A1F16;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 38px;
+    letter-spacing: 25%;
+}
+
+.card-list {
+    padding: 16px;
+    color: #60695C;
+}
+
+.card-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-icon {
+    margin-right: 10px;
+}
+
+.add-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 32px;
+}
+
+.new-card-heading {
+    color: #1A1F16;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 38px;
+    letter-spacing: 25%;
+}
+
+.cardholder {
+    padding: 8px;
+    margin: 15px 0;
+}
+
+.cardnumber, .expiry-cvc, .default-payment {
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.label-name {
+    padding: 0 8px;
+    color: #60695C;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.input-box {
+    padding: 8px 16px;
+    border-radius: 13px;
+    box-shadow: 0px 4px 16px 0px rgba(26, 31, 22, 0.15);
+}
+
+.default-label-text {
+    color: #1A1F16;
+    font-weight: 400;
+}
+
+.payment-method-button {
+    padding: 16px;
+}
+
+.payment-method {
+    background-color: #1A1F16;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    padding: 8px 24px;
+}
+
+.checkout-link {
+    color: #1A1F16;
+    text-decoration: underline;
+}
+
+.secure-connection {
+    text-align: end;
+    color: #02D693;
+}

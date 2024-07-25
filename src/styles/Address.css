@@ -1,0 +1,36 @@
+.address-container{
+    background: #ffff;
+    border-radius: 10px ;
+    margin-bottom: 20px;
+}
+.no-address-container{
+    background: #ffff;
+    border-radius: 10px ;
+    margin-bottom: 20px;
+}
+
+.btn-address{
+    border: 1px solid #1A1F16;
+    border-radius: 11px;
+    padding: 4px 14px;
+    background-color: transparent;
+    position: relative;
+    top: 35%;
+}
+.btn-no-address{
+    border: 1px solid #1A1F16;
+    border-radius: 11px;
+    padding: 4px 14px;
+    background-color: transparent;
+    margin: 20px;
+}
+.address-content{
+    margin: 20px;
+}
+.no-address-content{
+    margin: 20px;
+}
+h2{
+    font-weight: lighter;
+    letter-spacing: 4px;
+}

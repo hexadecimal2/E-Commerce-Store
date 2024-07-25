@@ -13,6 +13,7 @@ import iphone11Blue from '../assets/iphone-12-pro-blue.png';
 import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
 import '../App.css';
+import '../styles/ProductList.css';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/actions/actions';
 
@@ -30,6 +31,7 @@ const ProductList = () => {
             description : 'Stay connected and active with the Apple Watch Series 5 SE, featuring advanced health tracking and customizable watch faces.',
             fullDescription:'Stay connected and active with the Apple Watch Series 5 SE, featuring advanced health tracking and customizable watch faces. The Series 5 SE offers a Retina display, ECG app, fall detection, and built-in compass. It also includes an always-on altimeter and a variety of workout modes to monitor your fitness activities. The watch is swim-proof, making it ideal for all kinds of water activities.',
             price: 529.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -40,6 +42,7 @@ const ProductList = () => {
             description : 'Experience wireless freedom and superior sound quality with the light grey Sony ZX33OBT headphones.',
             fullDescription:'Experience wireless freedom and superior sound quality with the light grey Sony ZX33OBT headphones. These headphones offer Bluetooth connectivity, 30mm driver units for dynamic sound, and a swivel design for easy portability. The built-in microphone and NFC one-touch connection provide convenience for hands-free calls and music streaming.',
             price: 39.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -50,6 +53,7 @@ const ProductList = () => {
             description : 'The iPhone 11 in Serious Black offers stunning photos, powerful performance, and all-day battery life.',
             fullDescription:'The iPhone 11 in Serious Black offers stunning photos, powerful performance, and all-day battery life. It features a 6.1-inch Liquid Retina HD display, dual-camera system with 12MP Ultra Wide and Wide cameras, and Night mode for impressive low-light photography. Powered by the A13 Bionic chip, the iPhone 11 provides smooth performance and efficient multitasking.',
             price: 619.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -60,6 +64,7 @@ const ProductList = () => {
             fullDescription:'Enjoy the sleek design and robust features of the iPhone 11, now available in the eye-catching Subway Blue. This model includes a 6.1-inch Liquid Retina HD display, dual-camera system with Ultra Wide and Wide lenses, and all the advanced features of iOS. The A13 Bionic chip ensures powerful performance for all your apps and games.',
             description : 'Enjoy the sleek design and robust features of the iPhone 11, now available in the eye-catching Subway Blue.',
             price: 619.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -70,6 +75,7 @@ const ProductList = () => {
             description : 'Make a statement with the iPhone 11 in Product RED, combining cutting-edge technology with a bold color.',
             fullDescription:' Make a statement with the iPhone 11 in Product RED, combining cutting-edge technology with a bold color. This edition supports the global fight against AIDS with a portion of proceeds going to the Global Fund. It features the same powerful A13 Bionic chip, dual-camera system, and long battery life as other iPhone 11 models.',
             price: 619.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -80,6 +86,7 @@ const ProductList = () => {
             description : 'The iPhone 11 in Milky White provides a clean, classic look with the power and performance you expect from Apple.',
             fullDescription:'The iPhone 11 in Milky White provides a clean, classic look with the power and performance you expect from Apple. This model includes a 6.1-inch Liquid Retina HD display, dual 12MP cameras with 4K video recording, and Night mode. With its robust design and water resistance, it is built to last in any environment.',
             price: 619.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -90,6 +97,7 @@ const ProductList = () => {
             description : 'Upgrade to the iPhone 13 in Product RED for enhanced performance, stunning camera capabilities, and vibrant design.',
             fullDescription:'Upgrade to the iPhone 13 in Product RED for enhanced performance, stunning camera capabilities, and vibrant design. Featuring the A15 Bionic chip, this model offers improved speed and efficiency. The advanced dual-camera system includes sensor-shift optical image stabilization and cinematic mode for professional-quality video.',
             price: 619.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -100,6 +108,8 @@ const ProductList = () => {
             fullDescription:'The latest iPhone 14 in Product RED delivers unmatched performance, cutting-edge features, and a striking design. Powered by the A16 Bionic chip, it provides extraordinary speed and efficiency. The iPhone 14 includes an advanced camera system with ProRAW capabilities and enhanced battery life for all-day use.',
             description : 'The latest iPhone 14 in Product RED delivers unmatched performance, cutting-edge features, and a striking design.',
             price: 619.99,
+            quantity: 1,
+            rating: 4
         },
         {
             id: 9,
@@ -109,6 +119,7 @@ const ProductList = () => {
             description : 'The Dell XPS 13 in white offers a premium laptop experience with a stunning display, powerful performance, and sleek design.',
             fullDescription:'The Dell XPS 13 in white offers a premium laptop experience with a stunning display, powerful performance, and sleek design. It features a 13.4-inch InfinityEdge display, up to 11th Gen Intel Core processors, and a long-lasting battery. The lightweight and durable build make it perfect for on-the-go productivity.',
             price: 1799.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -119,6 +130,7 @@ const ProductList = () => {
             description : 'The iPhone 11 in Navy Blue combines elegance and functionality, providing a seamless user experience with impressive features.',
             fullDescription:'The iPhone 11 in Navy Blue combines elegance and functionality, providing a seamless user experience with impressive features. It includes a 6.1-inch Liquid Retina HD display, A13 Bionic chip, and dual-camera system. The sleek Navy Blue finish adds a touch of sophistication to this versatile device.',
             price: 729.99,
+            quantity: 1,
             rating: 4
         },
         {
@@ -129,6 +141,7 @@ const ProductList = () => {
             description : 'The Macbook Air is the perfect blend of performance and portability, featuring a stunning Retina display and advanced technology.',
             fullDescription:'The MacBook Air is the perfect blend of performance and portability, featuring a stunning Retina display and advanced technology. Powered by the Apple M1 chip, it delivers incredible speed and efficiency. The lightweight design, long battery life, and high-resolution display make it ideal for both work and entertainment.',
             price: 3799.99,
+            quantity: 1,
             rating: 5
         },
         {
@@ -139,6 +152,7 @@ const ProductList = () => {
             fullDescription:'Stay productive and creative on the go with the Samsung Note 21 in Violet, featuring a powerful S Pen and vibrant display. The large AMOLED screen provides stunning visuals, while the advanced camera system captures detailed photos and videos. With its robust performance and stylish design, the Note 21 is perfect for both work and play.',
             description : 'Stay productive and creative on the go with the Samsung Note 21 in Violet, featuring a powerful S Pen and vibrant display.',
             price: 319.99,
+            quantity: 1,
             rating: 4
         }
     ];
@@ -149,7 +163,7 @@ const ProductList = () => {
     };
 
     const handleAddToCart = (product) => {
-        dispatch(addToCart(product));
+        dispatch(addToCart(product, 1));
     }
 
     const filteredProducts = products.filter(product =>
@@ -159,12 +173,12 @@ const ProductList = () => {
     return (
         <div className='product-list'>
             <div className='container'>
-                <div className="search-bar mb-4 mx-auto justify-content-center" style={{ maxWidth: '50%' }}>
+                <div className="search-bar mt-4 mb-4 mx-auto justify-content-center" style={{ maxWidth: '50%' }}>
                     <label className="search-label" htmlFor="search">Search Item</label>
                     <input
                         type="text"
                         id="search"
-                        className="form-control"
+                        className="form-control search-box"
                         placeholder="Apple Watch, Samsung 21, Macbook Pro"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}

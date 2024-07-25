@@ -17,9 +17,26 @@ const initialAddressState = {
 // Cart Reducer
 export const cartReducer = (state = initialCartState, action) => {
   switch (action.type) {
+    // case ActionTypes.ADD_TO_CART:
+    //   return {
+    //     products: [...state.products, action.payload]
+    //   };
     case ActionTypes.ADD_TO_CART:
-      return {
-        products: [...state.products, action.payload]
+      const { product, quantity } = action.payload;
+      const existingItemIndex = state.products.findIndex(item => item.id === product.id);
+
+      if (existingItemIndex !== -1) {
+        const updatedProducts = [...state.products];
+        updatedProducts[existingItemIndex].quantity += quantity;
+        return {
+          ...state,
+          products: updatedProducts,
+        };
+      } else {
+        return {
+          ...state,
+          products: [...state.products, { ...product, quantity }],
+        };
       };
         case ActionTypes.INCREASE_QUANTITY:
             return {

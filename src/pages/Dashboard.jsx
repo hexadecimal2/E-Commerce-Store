@@ -14,7 +14,7 @@ const Dashboard = () => {
                 <ProductList />
                 </div>
                 <div className="col-3 me-0">
-                <Sidebag />
+                <Sidebag caption = "View Bag" link='/check-bag'/>
                 </div>
             </div>
         </div>

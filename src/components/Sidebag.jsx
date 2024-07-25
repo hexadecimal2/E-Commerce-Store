@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Link } from 'react-router-dom';
 
-const Sidebag = () => {
+const Sidebag = (props) => {
   const products = useSelector((state) => state.cart.products);
 
   return (
@@ -19,7 +19,8 @@ const Sidebag = () => {
         ))}
 
       </div>
-      <button><Link to={'/check-bag'}>Check Bag</Link></button>
+     
+      <button onClick={props.event}><Link to={props.link}>{props.caption}</Link></button>
     </div>
   );
 };

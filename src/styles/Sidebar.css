@@ -30,10 +30,12 @@ ul {
     padding: 0;
 }
 
-.active li {
+.sidebar .btn.active {
     background-color: #1A1F16;
     color: #ffffff;
+    padding: 8px;
     border-radius: 8px;
+    border: none;
 }
 
 .link {

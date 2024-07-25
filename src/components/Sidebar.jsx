@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import '../styles/Sidebar.css';
 import Logo from "../assets/logo.png";
 import { Link } from 'react-router-dom';
@@ -7,6 +8,7 @@ import { faBars, faTimes, faStore, faShoppingBag, faSignOutAlt  } from "@fortawe
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const currentLocation = useLocation()
   
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
@@ -28,7 +30,7 @@ const Sidebar = () => {
           <ul className="nav-links">
             <Link to='/' className="link">
             <li>
-              <button className="btn">
+              <button className={`btn ${currentLocation.pathname === '/' ? 'active' : ''}`}>
               <FontAwesomeIcon icon={faStore} />
               {/* conditional rendering */}
               {isExpanded && <span>Store</span>}
@@ -37,7 +39,7 @@ const Sidebar = () => {
             </Link>
             <Link to='/check-bag' className="link">
             <li>
-              <button className="btn">
+              <button className={`btn ${currentLocation.pathname === '/check-bag' ? 'active' : ''}`}>
               <FontAwesomeIcon icon={faShoppingBag} />
               {/* conditional rendering of bag text */}
               {isExpanded && <span>Bag</span>}

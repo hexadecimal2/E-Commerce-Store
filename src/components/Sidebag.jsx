@@ -20,8 +20,7 @@ const Sidebag = (props) => {
         ))}
         <p>Bag Total: {itemsTotal}</p>
       </div>
-     
-      <button onClick={props.event}><Link to={props.link}>{props.caption}</Link></button>
+      <button onClick={props.event} className='back-to-checkbag'><Link to={props.link} className='view-bag-button'><i class="bi bi-bag-fill"></i>{props.caption}</Link></button>
     </div>
   );
 };

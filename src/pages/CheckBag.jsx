@@ -26,11 +26,7 @@ const CheckBag = () => {
                 <Sidebag event = {() => gotToCheckoutPage()} caption = "Checkout" />
                 </div>
             </div>
-        </div>
-            
-            
-            
-            
+        </div>      
         </>
     )
 }

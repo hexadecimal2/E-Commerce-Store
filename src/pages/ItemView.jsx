@@ -21,7 +21,7 @@ const ItemView = () => {
             </Col>
 
             <Col md={3}>
-            <Sidebag/>
+            <Sidebag caption="  View Bag" link="/check-bag"/>
             </Col>
 
         </Row>

@@ -22,7 +22,7 @@ const CheckBag = () => {
                 <CheckBagItems/>
                 </div>
                 <div className="col-2">
-                <Sidebag event={() => gotToCheckoutPage()} caption="Checkout"/>
+                <Sidebag event={() => gotToCheckoutPage()} caption="  Checkout"/>
                 </div>
             </div>
         </div>

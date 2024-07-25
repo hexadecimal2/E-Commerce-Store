@@ -72,17 +72,17 @@ left: 1rem;
     border-radius: 20px;
 }
 
-a:hover{ 
+.back-text{ 
     color: black;
     text-decoration: none;
 }
 
-a:visited{
+.back-text{
     color: black;
     text-decoration: none;
 }
 
-a{
+.back-text{
     color: black;
     text-decoration: none;
     margin-bottom: 15px;

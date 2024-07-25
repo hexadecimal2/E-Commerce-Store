@@ -40,7 +40,12 @@ const OrderSummary = () => {
             <button className="place-order-btn">Place your order</button>
             
         </div>
-        <button className='back-to-checkout'> Back</button>
+        <button className='back-to-checkout'>
+            <span className='back-to-bag'>
+            <i class="bi bi-chevron-left"></i>
+            Back
+            </span>
+        </button>
         </>
     );
 };

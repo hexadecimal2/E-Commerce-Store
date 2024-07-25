@@ -1,0 +1,50 @@
+.order-summary {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    width: 250px;
+}
+
+.order-summary h2 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: #60695C;
+}
+
+.total {
+    font-weight: 500;
+    font-size: 20px;
+    color: #E5252C;
+}
+
+hr {
+    border: 1px solid #BFD1E5;
+    text-align: center;
+}
+
+.place-order-btn {
+    display: block;
+    margin: auto;
+    background-color: #1A1F16;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    border-radius: 11px;
+    padding: 8px 24px;
+}
+
+.back-to-checkout {
+    border: 1px solid #1A1F16;
+    border-radius: 11px;
+    padding: 8px 24px;
+    margin: 15px 0px 0px 169px
+}

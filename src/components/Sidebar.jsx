@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import '../styles/Sidebar.css';
+import '../styles/Sidebar.css';
 import Logo from "../assets/logo.png";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,7 +21,7 @@ const Sidebar = () => {
             <img src={Logo} alt="commerce website logo" />
           </div>
           </Link>
-          <button className="btn menu-btn" onClick={toggleSidebar}>
+          <button className="btn toggle-button" onClick={toggleSidebar}>
             <FontAwesomeIcon icon={isExpanded ? faTimes : faBars} />
           </button>
           
@@ -35,7 +35,7 @@ const Sidebar = () => {
               </button>
             </li>
             </Link>
-            <Link to='/bag' className="link">
+            <Link to='/check-bag' className="link">
             <li>
               <button className="btn">
               <FontAwesomeIcon icon={faShoppingBag} />

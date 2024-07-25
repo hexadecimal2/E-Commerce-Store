@@ -6,9 +6,21 @@ import Sidebar from '../components/Sidebar';
 const Dashboard = () => {
     return (
         <>
+        <div className="container m">
         <Sidebar />
-        <ProductList />
-        <Sidebag />
+            <div className="row ms-3">
+                
+                <div className="col-9">
+                <ProductList />
+                </div>
+                <div className="col-3 me-0">
+                <Sidebag />
+                </div>
+            </div>
+        </div>
+        
+        
+        
         </>
     );
 };

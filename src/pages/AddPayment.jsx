@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-// import '../styles/AddPayment.css';
+import '../styles/AddPayment.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
@@ -70,13 +70,13 @@ const AddPayment = () => {
                         SELECT A CARD
                     </div>
                     <div className="card-list">
-                        <ul>
+                        <div className='row'>
                             {cards.map((card, index) => (
-                                <li key={index} className='card details' onClick={() => handleCardClick(card)}>
-                                    <FontAwesomeIcon icon={faCreditCard} /> {card.cardType} ending in {card.last4}
-                                </li>
+                                <div key={index} className='col-12' onClick={() => handleCardClick(card)}>
+                                    <FontAwesomeIcon icon={faCreditCard} className='me-2' /> {card.cardType} ending in {card.last4}
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="container add-card">

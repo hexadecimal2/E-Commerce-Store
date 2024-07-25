@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import '../styles/AddAddress.css'
+import '../styles/AddAddress.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
@@ -32,7 +32,7 @@ const AddAddress = () => {
 
   return (
     <>
-    <div className="container">
+    <div className="container-address">
       <form className="add-address-form" onSubmit={handleSubmit}>
         <div className="form-group shipping">
           <label htmlFor="name" className="label-name">

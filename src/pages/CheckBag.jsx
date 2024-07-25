@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckBagItems from '../components/CheckBagItems';
 import Sidebag from '../components/Sidebag';
 import Sidebar from '../components/Sidebar';
@@ -12,10 +13,24 @@ const CheckBag = () => {
     }
     return(
         <>
-            <Sidebar/>
-            <CheckBagItems/>
-            <button onClick={() => gotToCheckoutPage()}>Checkout</button>
-            <Sidebag/>
+        <div className="container">
+            <div className="row">
+                <div className="col-1">
+                <Sidebar/>
+                </div>
+                <div className="col-9">
+                <CheckBagItems/>
+                </div>
+                <div className="col-2">
+                <Sidebag/>
+                <button onClick={() => gotToCheckoutPage()}>Checkout</button>
+                </div>
+            </div>
+        </div>
+            
+            
+            
+            
         </>
     )
 }

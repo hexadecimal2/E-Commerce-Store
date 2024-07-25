@@ -17,7 +17,7 @@ const CheckBagItems = () => {
         dispatch(decreaseQuantity(productId));
     };
 
-    const itemsTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    // const itemsTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
         <div className="container">
@@ -45,9 +45,9 @@ const CheckBagItems = () => {
                     </div>
                 ))
             )}
-            <div className="total-bag">
+            {/* <div className="total-bag">
                 <p>Total Bag: {itemsTotal}</p>
-            </div>
+            </div> */}
         </div>
         
     );

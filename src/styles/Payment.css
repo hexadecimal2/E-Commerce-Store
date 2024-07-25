@@ -1,0 +1,16 @@
+.payment-container{
+    background: #ffff;
+    border-radius: 20px ;
+    margin-bottom: 50px;
+}
+.btn-payment{
+    border: 1px solid #1A1F16;
+    border-radius: 11px;
+    padding: 4px 14px;
+    background-color: transparent;
+    position: relative;
+    top: 35%;
+}
+.payment-content{
+    margin: 20px;
+}

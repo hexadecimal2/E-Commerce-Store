@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckBagItems from '../components/CheckBagItems';
+import ReviewBag from '../components/ReviewBag';
 import Address from '../components/Address';
 import Payment from '../components/Payment';
 import OrderSummary from '../components/OrderSummary';
@@ -7,18 +7,16 @@ import OrderSummary from '../components/OrderSummary';
 const Checkout = () => {
    
     return(
-        <div>
-            <div>
+        <div className='container'>
+        <div className='row md-4'>
+            <div className='col-md-9'>
                 <Address/>
-            </div>
-            <div>
                 <Payment/>
+                <ReviewBag/>
             </div>
-            <div>
-                <CheckBagItems/>
-            </div>
-            <div>
+            <div className='col-md-3'>
                 <OrderSummary />
+            </div>
             </div>
         </div>
     )

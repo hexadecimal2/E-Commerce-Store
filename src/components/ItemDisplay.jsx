@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 //import Sidebar from '../components/sidebar/Sidebar';
 //import Bag from '../components/Sidebag';
 import { useLocation, Link } from 'react-router-dom';
@@ -24,7 +24,7 @@ const ItemDisplay = () => {
         <>
             {/* Joshua's section */}
                
-                        <Link to={'/'}><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.375 1.25L1.625 8L8.375 14.75" stroke="#1A1F16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Back</span></Link>
+                        <Link to={'/'}><svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.375 1.25L1.625 8L8.375 14.75" stroke="#1A1F16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span className='back-button'>Back</span></Link>
                         
                        <div className='top-area'>
                        

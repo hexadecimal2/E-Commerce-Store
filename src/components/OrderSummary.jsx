@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/OrderSummary.css'
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 const OrderSummary = () => {
     const cartItems = useSelector(state => state.cart.products);
@@ -40,7 +41,14 @@ const OrderSummary = () => {
             <button className="place-order-btn">Place your order</button>
             
         </div>
-        <button className='back-to-checkout'> Back</button>
+        <button className='back-to-checkout'>
+            <Link to='/check-bag'>
+            <span className='back-to-bag'>
+            <i class="bi bi-chevron-left"></i>
+            {' '} Back
+            </span>
+            </Link>
+        </button>
         </>
     );
 };

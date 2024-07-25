@@ -89,7 +89,7 @@ a{
   
 }
 
-span{
+.back-button span{
  font-size: 18px;
  position: absolute;
 }

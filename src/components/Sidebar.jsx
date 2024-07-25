@@ -35,7 +35,7 @@ const Sidebar = () => {
               </button>
             </li>
             </Link>
-            <Link to='/bag' className="link">
+            <Link to='/check-bag' className="link">
             <li>
               <button className="btn">
               <FontAwesomeIcon icon={faShoppingBag} />

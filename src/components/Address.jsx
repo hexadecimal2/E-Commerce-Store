@@ -25,7 +25,7 @@ const Address = () => {
         <div className='address-container'>
             <div className='row'>
             <div className=' col-md-9 address-content'>
-            <h1>SHIPPING ADDRESS</h1>
+            <h2>SHIPPING ADDRESS</h2>
             <p>
                 {shippingName} <br />
                 {streetName} <br />

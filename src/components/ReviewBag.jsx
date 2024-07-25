@@ -19,7 +19,7 @@ const CheckBagItems = () => {
 
     return (
         <div className="container" style={{background: '#ffff', borderRadius:'10px'}}>
-        <h2 style={{fontWeight: 'lighter', letterSpacing: '4px'}}>REVIEW YOUR BAG</h2>
+        <h2 style={{fontWeight: 'lighter', letterSpacing: '4px', fontSize: '25px'}}>REVIEW YOUR BAG</h2>
             {cartItems.length === 0 ? (
                 <p>Your bag is empty</p>
             ) : (

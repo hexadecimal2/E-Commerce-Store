@@ -11,12 +11,18 @@ export const ActionTypes = {
 //Creating the three actions
 
 //The first action to add to cart
-export const addToCart = (product) => {
+// export const addToCart = (product) => {
+//     return {
+//         type: ActionTypes.ADD_TO_CART,
+//         payload: product,
+//     }
+// };
+export const addToCart = (product, quantity) => {
     return {
-        type: ActionTypes.ADD_TO_CART,
-        payload: product,
-    }
-};
+      type: ActionTypes.ADD_TO_CART,
+      payload: { product, quantity },
+    };
+  };
 
 //Incrementing and decrementing quantity
 export const increaseQuantity = (productId) => ({

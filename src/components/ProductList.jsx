@@ -162,7 +162,7 @@ const ProductList = () => {
     };
 
     const handleAddToCart = (product) => {
-        dispatch(addToCart(product));
+        dispatch(addToCart(product, 1));
     }
 
     const filteredProducts = products.filter(product =>

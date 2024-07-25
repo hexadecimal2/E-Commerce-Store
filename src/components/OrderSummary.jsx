@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/OrderSummary.css'
 import { useSelector } from 'react-redux';
 
 const OrderSummary = () => {
@@ -15,28 +16,31 @@ const OrderSummary = () => {
             <h2>Order Summary</h2>
             <div className="summary-item">
                 <span>Items:</span>
-                <span>${itemsTotal.toFixed(2)}</span>
+                {/* toFixed rounds of the numbers to 2 decimal places */}
+                <span className='price-summary'>${itemsTotal.toFixed(2)}</span> 
             </div>
             <div className="summary-item">
                 <span>Shipping:</span>
-                <span>${shippingCost.toFixed(2)}</span>
+                <span className='price-summary'>${shippingCost.toFixed(2)}</span>
             </div>
             <div className="summary-item">
                 <span>Estimated GST:</span>
-                <span>${estimatedGST.toFixed(2)}</span>
+                <span className='price-summary'>${estimatedGST.toFixed(2)}</span>
             </div>
             <div className="summary-item">
                 <span>Gift Card:</span>
-                <span>$0.00</span>
+                <span className='price-summary'>$0.00</span>
             </div>
             <hr />
             <div className="summary-item total">
                 <span>Order Total:</span>
-                <span>${orderTotal.toFixed(2)}</span>
+                <span className='price-summary'>${orderTotal.toFixed(2)}</span>
             </div>
+            <hr />
             <button className="place-order-btn">Place your order</button>
-            <button> Back</button>
+            
         </div>
+        <button className='back-to-checkout'> Back</button>
         </>
     );
 };

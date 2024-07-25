@@ -19,7 +19,7 @@ const Sidebag = () => {
         ))}
 
       </div>
-      <button><Link to={'/check-bag'}>Check Bag</Link></button>
+      <button className='back-to-checkbag'><Link to={'/check-bag'} className='view-bag-button'><i class="bi bi-bag-fill"></i> View Bag</Link></button>
     </div>
   );
 };

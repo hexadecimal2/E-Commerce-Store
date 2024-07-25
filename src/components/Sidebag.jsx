@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebag = (props) => {
   const products = useSelector((state) => state.cart.products);
+  const itemsTotal = products.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
     <div className='sidebag mt-4'>
@@ -17,7 +18,7 @@ const Sidebag = (props) => {
             <img src={product.image} alt={product.name} className="cart-item-image" height='70' width='70' />
           </div>
         ))}
-
+        <p>Bag Total: {itemsTotal}</p>
       </div>
      
       <button onClick={props.event}><Link to={props.link}>{props.caption}</Link></button>
